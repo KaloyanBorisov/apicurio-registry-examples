@@ -22,7 +22,7 @@ package io.apicurio.registry.examples.custom.resolver;
 public class Config {
 
     public static final String REGISTRY_URL = "http://localhost:8080/apis/registry/v2";
-    public static final String SERVERS = "localhost:9092";
+    public static final String SERVERS = "localhost:29092";
     public static final String TOPIC_NAME = CustomSchemaResolverExample.class.getSimpleName();
     public static final String SUBJECT_NAME = "Greeting";
     public static final String SCHEMA = "{\"type\":\"record\",\"name\":\"Greeting\",\"fields\":[{\"name\":\"Message\",\"type\":\"string\"},{\"name\":\"Time\",\"type\":\"long\"}]}";

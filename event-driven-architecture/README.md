@@ -86,8 +86,10 @@ Let's create the Debezium connector to start capturing the changes of the databa
 1. Create the connector using the REST API. You can execute this step either by using the curl command below
    or by creating the connector from the Kafka UI.
 
-    ```bash
-    curl -X POST http://localhost:8083/connectors -H 'content-type:application/json' -d @studio-connector.json
+    ```
+     create new connector in kafka-ui: http://localhost:8081/ui/clusters/local/connectors
+     connector name: Test
+     copy json configuration from studio-connector.json 
     ```
 
 ### Check the data

@@ -61,7 +61,7 @@ import java.util.Properties;
 public class SimpleAvroExample {
 
     private static final String REGISTRY_URL = "http://localhost:8080/apis/registry/v2";
-    private static final String SERVERS = "localhost:9092";
+    private static final String SERVERS = "localhost:29092";
     private static final String TOPIC_NAME = SimpleAvroExample.class.getSimpleName();
     private static final String SUBJECT_NAME = "Greeting";
     private static final String SCHEMA = "{\"type\":\"record\",\"name\":\"Greeting\",\"fields\":[{\"name\":\"Message\",\"type\":\"string\"},{\"name\":\"Time\",\"type\":\"long\"}]}";

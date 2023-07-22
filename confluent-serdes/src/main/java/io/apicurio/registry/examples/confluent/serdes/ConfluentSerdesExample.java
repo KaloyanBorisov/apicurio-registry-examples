@@ -70,7 +70,7 @@ public class ConfluentSerdesExample {
     private static final String REGISTRY_URL = "http://localhost:8080/apis/registry/v2";
     private static final String CCOMPAT_API_URL = "http://localhost:8080/apis/ccompat/v6";
 
-    private static final String SERVERS = "localhost:9092";
+    private static final String SERVERS = "localhost:29092";
     private static final String TOPIC_NAME = ConfluentSerdesExample.class.getSimpleName();
     private static final String SUBJECT_NAME = "Greeting";
     private static final String SCHEMA = "{\"type\":\"record\",\"name\":\"Greeting\",\"fields\":[{\"name\":\"Message\",\"type\":\"string\"},{\"name\":\"Timestamp\",\"type\":\"long\"}]}";
@@ -129,7 +129,7 @@ public class ConfluentSerdesExample {
                     System.out.println("No messages waiting...");
                 } else records.forEach(record -> {
                     GenericRecord value = record.value();
-                    System.out.println("Consumed a message: " + value.get("Message") + " @ " + new Date((long) value.get("Timestamp")));
+                    System.out.println("Consumed a message: " + value.get("message") + " @ " + new Date((long) value.get("time")));
                 });
             }
         } finally {

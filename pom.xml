@@ -52,7 +52,6 @@
         <module>serdes-with-references</module>
         <module>avro-maven-with-references</module>
         <module>protobuf-validation</module>
-        <!--<module>camel-quarkus-kafka</module>-->
     </modules>
 
     <properties>
