@@ -64,7 +64,7 @@ import io.apicurio.registry.serde.protobuf.ProtobufKafkaSerializer;
 public class ProtobufFindLatestExample {
 
     private static final String REGISTRY_URL = "http://localhost:8080/apis/registry/v2";
-    private static final String SERVERS = "localhost:9092";
+    private static final String SERVERS = "localhost:29092";
     private static final String TOPIC_NAME = ProtobufFindLatestExample.class.getSimpleName();
     private static final String SCHEMA_NAME = "AddressBook";
 
@@ -94,11 +94,19 @@ public class ProtobufFindLatestExample {
                                 .setEmail("aa@bb.com")
                                 .setId(1)
                                 .setName("aa")
+                                .addPhones(Person.PhoneType.MOBILE_VALUE,
+                                           Person.PhoneNumber.newBuilder()
+                                                   .setNumber("916")
+                                                   .build())
                                 .build())
                         .addPeople(Person.newBuilder()
                                 .setEmail("bb@bb.com")
                                 .setId(2)
                                 .setName("bb")
+                                .addPhones(Person.PhoneType.MOBILE_VALUE,
+                                           Person.PhoneNumber.newBuilder()
+                                                 .setNumber("513")
+                                                 .build())
                                 .build())
                         .build();
 
